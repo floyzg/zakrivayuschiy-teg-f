@@ -138,7 +138,14 @@
   opacity: 0.5;
   font-family: var(--font-accent), fantasy;
   font-size: 14px;
-  text-shadow: 0 0 1px #fff;
+  text-shadow: 0 0 1px var(--text-stroke-color);
+}
+
+@supports (-webkit-text-stroke: 1px var(--text-stroke-color)) {
+  .card__mark {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
 }
 
 .card__details {
