@@ -321,10 +321,6 @@
     font-size: var(--hero-title);
   }
 
-  .save__button {
-    flex-direction: column;
-  }
-
   .button__icon {
     width: 25px;
     height: 25px;
