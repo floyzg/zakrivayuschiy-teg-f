@@ -67,7 +67,6 @@
   width: 100%;
   margin-block-start: 100px;
   padding-block-end: 100px;
-
 }
 
 .card {
@@ -161,7 +160,8 @@
   align-items: center;
   box-sizing: border-box;
   border: 2px solid var(--border-color);
-  overflow: hidden; /* keep pseudo-element inside button */
+  overflow: hidden;
+  color: #000;
   background: var(--button-text-color);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
@@ -229,9 +229,11 @@
 }
 
 .button__text {
+  color: #fff;
   font-family: var(--font-accent);
   font-size: var(--btn-font-size);
   line-height: 90%;
+  mix-blend-mode: difference;
 }
 
 .save {
@@ -320,6 +322,11 @@
 
   .save__button {
     flex-direction: row;
+  }
+
+  .button__icon {
+    width: 21px;
+    height: 21px;
   }
 
   .dialog__icon {
