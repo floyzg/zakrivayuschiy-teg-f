@@ -105,27 +105,21 @@
 .filter-sepia {
   filter: sepia(1);
 }
-
-.filter-bw {
+.filter-grayscale {
   filter: grayscale(1);
 }
-
 .filter-contrast {
   filter: contrast(1.5);
 }
-
 .filter-blur {
   filter: blur(3px);
 }
-
-.filter-bright {
+.filter-brightness {
   filter: brightness(1.3);
 }
-
 .filter-saturate {
   filter: saturate(2);
 }
-
 .filter-hue {
   filter: hue-rotate(90deg) saturate(1.5);
 }
