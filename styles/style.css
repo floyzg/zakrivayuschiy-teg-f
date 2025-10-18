@@ -67,7 +67,7 @@
   width: 100%;
   margin-block-start: 100px;
   padding-block-end: 100px;
-  background-color: var(--bg-color);
+
 }
 
 .card {
@@ -91,14 +91,6 @@
   object-fit: cover;
   object-position: center;
   aspect-ratio: 1/1;
-}
-
-.card__image {
-  display: block;
-  width: 100%;
-  height: clamp(180px, 30vh, 360px);
-  object-fit: cover;
-  object-position: center;
 }
 
 /* photo effects */
