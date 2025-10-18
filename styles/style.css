@@ -9,8 +9,342 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
-
 .page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block-start: 100px;
+  color: var(--main-color);
+  font-family: var(--font-main), sans-serif;
+  font-size: var(--main-font-size);
+  background-color: var(--bg-color);
+  background-image: var(--cover-image);
+  background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--wght);
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  border: 2px solid var(--border-color);
+  font-family: var(--font-accent), fantasy;
+  text-transform: uppercase;
+  background-color: var(--bg-color);
+}
+
+.title__decor {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: clamp(122px, calc(0.00751 * 100vw + 119.18px), 130px);
+  font-family: var(--font-accent), fantasy;
+  font-size: var(--hero-title);
+  text-align: center;
+}
+
+.header__title {
+  margin-block-end: clamp(122px, calc(0.00751 * 100vw + 119.18px), 130px);
+  font-family: var(--font-accent), fantasy;
+  font-size: var(--hero-subtitle-size);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* main sections */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-block-start: 100px;
+  padding-block-end: 100px;
+  background-color: var(--bg-color);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-color);
+  max-inline-size: 700px;
+}
+
+.card__cover {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.card__cover-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1/1;
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+  height: clamp(180px, 30vh, 360px);
+  object-fit: cover;
+  object-position: center;
+}
+
+/* photo effects */
+.filter-sepia {
+  filter: sepia(1);
+}
+
+.filter-bw {
+  filter: grayscale(1);
+}
+
+.filter-contrast {
+  filter: contrast(1.5);
+}
+
+.filter-blur {
+  filter: blur(3px);
+}
+
+.filter-bright {
+  filter: brightness(1.3);
+}
+
+.filter-saturate {
+  filter: saturate(2);
+}
+
+.filter-hue {
+  filter: hue-rotate(90deg) saturate(1.5);
+}
+
+.card__title {
+  padding: 4px 10px;
+  font-family: var(--font-main), sans-serif;
+  font-size: var(--main-font-size, 18px);
+  font-variation-settings: "wght" var(--wght-bold);
+}
+
+.card__mark {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  opacity: 0.5;
+  font-family: var(--font-accent), fantasy;
+  font-size: 14px;
+  text-shadow: 0 0 1px #fff;
+}
+
+.card__details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  padding: 25px;
+}
+
+.card__paragraph {
+  font-family: var(--font-main), sans-serif;
+  font-size: var(--main-font-size);
+  line-height: 21px;
+  font-variation-settings: "wght" var(--wght);
+}
+
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 2px solid var(--border-color);
+  overflow: hidden; /* keep pseudo-element inside button */
+  background: var(--button-text-color);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* place overlay under the text */
+  width: 0%;
+  height: 100%;
+  background-color: var(--main-color);
+  transition: width 0.5s ease-in-out;
+}
+
+.button .button__text {
+  position: relative;
+  z-index: 2; /* keep text above overlay */
+  transition: color 0.5s ease-in-out;
+}
+
+.button:hover::before {
+  width: 100%;
+}
+
+.button:hover .button__text {
+  color: var(--button-text-color);
+}
+
+.card__button {
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+}
+
+.card__icon-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.card__like-button:hover{
+  color: #fff;
+  background: #000;
+  transition: .5s;
+}
+.card__icon-button:focus {
+  outline: none;
+}
+
+.button:focus {
+  outline: 1px solid #000;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--text-color, #000000);
+}
+
+.card__like-button {
+  min-width: 130px;
+  min-height: 38px;
+  cursor: pointer;
+}
+
+.button__text {
+  font-family: var(--font-accent);
+  font-size: var(--btn-font-size);
+  line-height: 90%;
+}
+
+.save {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.save__button {
+  flex-direction: column;
+  gap: 8px;
+  padding: 17px 20px;
+}
+
+.dialog[open] {
+  position: fixed;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-width: 341px;
+  max-width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
+  border: 2px solid var(--main-color);
+  padding-inline: clamp(30px, calc(43.52px - 0.939vw), 40px);
+  padding-block: 30px;
+  background-color: var(--bg-color);
+}
+
+.dialog::backdrop {
+  opacity: 0.75;
+  background: var(--main-color);
+}
+
+.dialog__title {
+  display: flex;
+  font-family: var(--font-accent), fantasy;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.dialog__container {
+  display: grid;
+  gap: 30px;
+}
+
+.dialog__button {
+  display: flex;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0px 0px;
+  inline-size: 100%;
+}
+
+.dialog__message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--font-accent), fantasy;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.dialog__message svg {
+  width: 39px;
+  height: 39px;
+  inline-size: 80px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    max-width: 700px;
+  }
+  .hero__title {
+    font-size: var(--hero-subtitle);
+  }
+
+  .title__decor {
+    font-size: var(--hero-title);
+  }
+
+  .save__button {
+    flex-direction: column;
+  }
+
+  .button__icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .save__button {
+    flex-direction: row;
+  }
+
+  .dialog__icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .dialog[open] {
+    padding: 30px 40px;
+  }
+
+  .dialog__message svg {
+    width: 39px;
+    height: 39px;
+    inline-size: 90px;
+  }
 }
