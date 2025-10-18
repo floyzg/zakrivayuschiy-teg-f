@@ -212,21 +212,21 @@
   cursor: pointer;
 }
 
-.card__like-button:hover{
+.card__like-button:hover {
   color: #fff;
   background: #000;
-  transition: .5s;
+  transition: 0.5s;
 }
 .card__icon-button:focus {
-  outline: none;
+  outline: 2px solid #000;
 }
 
 .button:focus {
-  outline: 1px solid #000;
+  outline: none;
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0px 0px var(--text-color, #000000);
+  box-shadow: 2px 2px 0px 0px #000;
 }
 
 .card__like-button {
