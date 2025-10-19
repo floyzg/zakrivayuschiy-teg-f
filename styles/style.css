@@ -196,13 +196,16 @@
 .card__button {
   display: flex;
   justify-content: end;
+  align-items: center;
   gap: 5px;
 }
 
 .card__icon-button {
   border: none;
+  padding: 0;
   background: transparent;
   cursor: pointer;
+  block-size: 34px;
 }
 
 .card__like-button:hover {
