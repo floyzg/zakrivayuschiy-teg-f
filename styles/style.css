@@ -125,7 +125,7 @@
 .card__mark {
   position: absolute;
   top: 25px;
-  right: 25px;
+  right: 13px;
   opacity: 0.5;
   font-family: var(--font-accent), fantasy;
   font-size: 14px;
@@ -317,6 +317,10 @@
 
   .title__decor {
     font-size: var(--hero-title);
+  }
+  
+  .card__mark {
+      right: 25px;
   }
 
   .save__button {
