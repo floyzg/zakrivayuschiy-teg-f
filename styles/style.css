@@ -251,6 +251,12 @@
   padding: 17px 20px;
 }
 
+.button__icon {
+  z-index: 2;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
 .dialog[open] {
   position: fixed;
   display: grid;
