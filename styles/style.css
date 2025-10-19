@@ -208,11 +208,6 @@
   block-size: 34px;
 }
 
-.card__like-button:hover {
-  color: #fff;
-  background: #000;
-  transition: 0.5s;
-}
 .card__icon-button:focus {
   outline: 2px solid #000;
 }
